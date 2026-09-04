@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="course">
+  <p class="breadcrumb"><a href="{{ '/' | relative_url }}">&larr; Alexander Cox</a></p>
+  <h1>{{ page.title }}</h1>
+  {%- if page.code or page.term %}
+  <p class="course-meta">
+    {%- if page.code %}{{ page.code }}{% endif -%}
+    {%- if page.code and page.term %} &middot; {% endif -%}
+    {%- if page.term %}{{ page.term }}{% endif -%}
+  </p>
+  {%- endif %}
+  {{ content }}
+</article>

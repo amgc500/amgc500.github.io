@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applied SDEs &middot; Alexander Cox</title>
+    <meta name="description" content="Alexander Cox — Professor of Probability, University of Bath.">
+    <link rel="stylesheet" href="/assets/css/pico.classless.min.css">
+    <link rel="stylesheet" href="/assets/css/pico-overrides.css">
+  </head>
+  <body>
+    <main class="page">
+      <article class="course">
+  <p class="breadcrumb"><a href="/">&larr; Alexander Cox</a></p>
+  <h1>Applied SDEs</h1>
+  <p class="course-meta">MA50251 &middot; SAMBa / TCC Graduate Course, 2017/18</p>
+  <p>This graduate course looks at Stochastic Differential Equations from an applied
+perspective. In particular, we do not assume a deep probabilistic background, and
+the emphasis tends to be on the applications, although hopefully there is also
+something to interest students with a more classical probability background.</p>
+
+<p>The course breaks roughly into two parts: after some motivation and discussion of
+introductory problems, we review much of the background theory — in particular an
+overview of stochastic integration in a Brownian filtration, and some SDE theory
+and key results, following the presentation in
+<a href="http://primo.bath.ac.uk/44BAT_VU1:CSCOP_44BAT_DEEP:44BAT_LMS_DSa1129710">Øksendal’s book</a>.</p>
+
+<p>Lectured by <a href="mailto:a.m.g.cox@bath.ac.uk">Alex Cox</a> (AC) and
+<a href="mailto:t.shardlow@bath.ac.uk">Tony Shardlow</a> (TS).</p>
+
+<p>Problem sheets are set weekly, and (for students who need to be assessed) there is
+coursework (25%) and a final exam (75%). The course is timetabled at 9:15–11:05 on
+Mondays in 4W 1.7. A full timetable of planned lectures is
+<a href="/teaching/MA50251/ASDEsTT1718.pdf">here</a>; see also the syllabus below.</p>
+
+<h2 id="lecture-notes">Lecture notes</h2>
+
+<ul>
+  <li>Lectures 1–4 · <a href="/teaching/MA50251/L1_2_3_4.pdf">pdf</a></li>
+  <li>Lectures 5–8 · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/ma50251_notes.pdf">pdf</a></li>
+</ul>
+
+<h2 id="problem-sheets">Problem sheets</h2>
+
+<ul>
+  <li>Sheet 1 · <a href="/teaching/MA50251/Q1.pdf">questions</a> · <a href="/teaching/MA50251/S1.pdf">solutions</a></li>
+  <li>Sheet 2 · <a href="/teaching/MA50251/Q2.pdf">questions</a> · <a href="/teaching/MA50251/S2.pdf">solutions</a></li>
+  <li>Sheet 3 · <a href="/teaching/MA50251/Q3.pdf">questions</a> · <a href="/teaching/MA50251/S3.pdf">solutions</a></li>
+  <li>Sheet 4 · <a href="/teaching/MA50251/Q4.pdf">questions</a> · <a href="/teaching/MA50251/S4.pdf">solutions</a></li>
+  <li>Sheet 5 · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/ma50251-1.pdf">questions</a> · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/sol-ma50251-1.pdf">solutions</a></li>
+  <li>Sheet 6 · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/ma50251-2.pdf">questions</a> · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/sol-ma50251-2.pdf">solutions</a></li>
+  <li>Sheet 7 · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/ma50251-3.pdf">questions</a> · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/sol-ma50251-3.pdf">solutions</a></li>
+  <li>Sheet 8 · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/ma50251-4.pdf">questions</a> · <a href="http://people.bath.ac.uk/tjs42/teaching/ma50251/sol-ma50251-4.pdf">solutions</a></li>
+</ul>
+
+<h2 id="notebooks">Notebooks</h2>
+
+<p>In the first half of the course, some examples are given using Python. The
+notebooks (and a complete pdf of each) are below. To get started, install
+<a href="http://ipython.org/install.html">Jupyter/IPython</a>; a dictionary for MATLAB users
+is <a href="http://mathesaurus.sourceforge.net/matlab-python-xref.pdf">here</a>.</p>
+
+<ul>
+  <li>Stochastic Integration · <a href="/teaching/MA50251/StochasticIntegration.ipynb">notebook</a> · <a href="/teaching/MA50251/StochasticIntegration.pdf">pdf</a></li>
+  <li>Quadratic Variation · <a href="/teaching/MA50251/QuadraticVariation.ipynb">notebook</a> · <a href="/teaching/MA50251/QuadraticVariation.pdf">pdf</a></li>
+  <li>Itô vs Stratonovich · <a href="/teaching/MA50251/ItoVsStratonovich.ipynb">notebook</a> · <a href="/teaching/MA50251/ItoVsStratonovich.pdf">pdf</a></li>
+  <li>Simple Integrands · <a href="/teaching/MA50251/SimpleIntegrands.ipynb">notebook</a> · <a href="/teaching/MA50251/SimpleIntegrands.pdf">pdf</a></li>
+  <li>Solving PDEs via Monte Carlo · <a href="/teaching/MA50251/SolvingPDEs.ipynb">notebook</a> · <a href="/teaching/MA50251/SolvingPDEs.pdf">pdf</a></li>
+</ul>
+
+<h2 id="syllabus">Syllabus</h2>
+
+<dl>
+  <dt><strong>Lecture 1</strong> (12/2/18, AC)</dt>
+  <dd>Introduction, motivating discussion, Brownian motion, Donsker’s invariance principle, quadratic variation.</dd>
+  <dt><strong>Lecture 2</strong> (19/2/18, AC)</dt>
+  <dd>Stochastic integration: construction, properties, Itô isometry, Stratonovich integral.</dd>
+  <dt><strong>Lecture 3</strong> (26/2/18, AC)</dt>
+  <dd>Stochastic calculus: Itô’s lemma, integration by parts.</dd>
+  <dt><strong>Lecture 4</strong> (5/3/18, AC)</dt>
+  <dd>Stochastic differential equations: existence and uniqueness, weak and strong solutions. Diffusion processes: Markov property, generators, boundary value problems.</dd>
+  <dt><strong>Lecture 5</strong> (12/3/18, TS)</dt>
+  <dd>Numerical methods for stochastic differential equations: Euler–Maruyama and Milstein methods, modes and rates of convergence, experiments.</dd>
+  <dt><strong>Lecture 6</strong> (9/4/18, TS)</dt>
+  <dd>Fokker–Planck equation. Derivation and example solutions. Ergodicity and invariant measures. Brownian dynamics and Langevin equations.</dd>
+  <dt><strong>Lecture 7</strong> (16/4/18, TS)</dt>
+  <dd>Exit-time problems. Formulation of the PDE for mean exit time. Small-noise limits and Kramers’ rate. Metastability.</dd>
+  <dt><strong>Lecture 8</strong> (23/4/18, TS)</dt>
+  <dd>Parameter estimation. Lamperti transformation. Estimating the diffusion coefficient. Derivation by Girsanov. Maximum likelihood estimation. Examples.</dd>
+</dl>
+
+<h2 id="related">Related</h2>
+
+<ul>
+  <li><a href="https://samba.ac.uk/">SAMBa</a></li>
+  <li><a href="http://tcc.maths.ox.ac.uk/">TCC</a></li>
+  <li><a href="http://www.bath.ac.uk/catalogues/2016-2017/ma/MA50251.html">Course description (catalogue)</a></li>
+</ul>
+
+</article>
+
+      <footer class="site-footer">
+        <p>Last updated September 2026.</p>
+      </footer>
+    </main>
+  </body>
+</html>

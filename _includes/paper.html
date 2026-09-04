@@ -1,0 +1,46 @@
+{% comment %}
+  Renders one publication list item from a `papers.yml` entry.
+  Usage (from index.html):  include paper.html  with  paper=<one entry from papers.yml>
+
+  All fields optional except `title`. See _data/papers.yml for the schema.
+  To add a new link type, add its key to `keys` and matching label to
+  `labels` below (same position). That is the only edit needed.
+
+  Whitespace: the inline segments (authors / ref / links / note) are separated
+  by ordinary newlines that HTML collapses to a single space. Do NOT add `-`
+  whitespace-stripping to those segment boundaries, or the segments run together
+  (e.g. a full stop butting straight against the next link).
+{% endcomment %}
+{%- assign p = include.paper -%}
+{%- assign keys   = "pdf,arxiv,code,video,slides,doi" | split: "," -%}
+{%- assign labels = "pdf,arXiv,code,video,slides,DOI"  | split: "," -%}
+<li class="paper">
+<span class="paper-title">&ldquo;{{ p.title }}&rdquo;</span>
+{%- if p.authors %}<br><span class="paper-authors">{{ p.authors }}.</span>{% endif %}
+{% if p.journal or p.year or p.volume or p.pages -%}
+<span class="paper-ref">
+{%- if p.journal -%}
+{%- if p.journal_url -%}<a href="{{ p.journal_url }}">{{ p.journal }}</a>{%- else -%}{{ p.journal }}{%- endif -%}
+{%- if p.open_access %} (Open Access){% endif -%}
+{%- endif -%}
+{%- capture cite -%}
+{%- if p.year %}({{ p.year }}){% endif %}{% if p.volume %} {{ p.volume }}{% endif %}{% if p.issue %} ({{ p.issue }}){% endif %}{% if p.pages %} {{ p.pages }}{% endif -%}
+{%- endcapture -%}
+{%- assign cite = cite | strip -%}
+{%- if cite != "" -%}{% if p.journal %}, {% endif %}{{ cite }}{%- endif -%}.</span>
+{%- endif %}
+{% if p.links -%}
+{%- assign linkstr = "" -%}
+{%- for key in keys -%}
+{%- assign url = p.links[key] -%}
+{%- if url -%}
+{%- assign label = labels[forloop.index0] -%}
+{%- if url contains "://" %}{% assign href = url %}{% else %}{% assign href = url | relative_url %}{% endif -%}
+{%- if linkstr != "" %}{% assign linkstr = linkstr | append: ", " %}{% endif -%}
+{%- assign linkstr = linkstr | append: '<a href="' | append: href | append: '">' | append: label | append: '</a>' -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if linkstr != "" -%}<span class="paper-links">{{ linkstr }}.</span>{%- endif -%}
+{%- endif %}
+{% if p.note %}<span class="paper-note">{{ p.note }}</span>{% endif %}
+</li>

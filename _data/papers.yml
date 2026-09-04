@@ -1,0 +1,409 @@
+# =============================================================================
+# Publication list for people.bath.ac.uk-style homepage, driven by Jekyll.
+#
+# This file is the single source of truth for the "Papers and Preprints"
+# section. Order here IS the order on the page (newest first, as you keep it) --
+# nothing is sorted automatically, so preprints can sit above published work.
+#
+# SCHEMA (every field is optional except `title`):
+#   title        The paper title (rendered without surrounding quotes -- the
+#                template adds them, so don't include your own).
+#   authors      Coauthor string, e.g. "With D. Hobson and J. Obloj". Omit for
+#                solo papers.
+#   journal      Journal / venue name, shown as the link text if `journal_url`
+#                is given, otherwise as plain text.
+#   journal_url  URL the journal name links to (DOI, publisher page, etc.).
+#   open_access  true  -> appends " (Open Access)" after the journal name.
+#   year         Publication year (or preprint year).
+#   volume       Volume.
+#   issue        Issue / number.
+#   pages        Page range, e.g. "327-400".
+#   note         FREE-TEXT / HTML, rendered verbatim at the end of the entry.
+#                This is the flexible slot: copyright lines, "to appear",
+#                errata, "the original publication is available at ...", etc.
+#   links        A map of {type: url}. Recognised types render with tidy
+#                labels, in this fixed order: pdf, arxiv, code, video, slides,
+#                doi. To add a new type/label, edit _includes/paper.html once.
+#
+# Accented names can be typed directly in this UTF-8 file (Kaellblad -> Källblad,
+# Obloj -> Obłój, Beiglboeck -> Beiglböck); no HTML entities needed.
+# =============================================================================
+
+papers:
+  - title: "Utility Maximisation with Model-independent Constraints"
+    authors: "With D. Hernandez-Hernandez"
+    links:
+      pdf: "/papers/UtilityWMIC.pdf"
+      arxiv: "https://arxiv.org/abs/2512.24371"
+
+  - title: "A measure-valued HJB perspective on Bayesian optimal adaptive control"
+    authors: "With S. Källblad and C. Wang"
+    links:
+      pdf: "/papers/Bayesian.pdf"
+      arxiv: "https://arxiv.org/abs/2502.12957"
+
+  - title: "Linear and uniform in time bound for the binary branching model with Moran type interactions"
+    authors: "With E. Horton, D. Villemonais"
+    links:
+      pdf: "/papers/UniformBBMMI.pdf"
+      arxiv: "https://arxiv.org/abs/2501.18208"
+
+  - title: "Delayed switching identities and multi-marginal solutions to the Skorokhod embedding problem"
+    authors: "With A. M. Grass"
+    links:
+      pdf: "/papers/dSWID.pdf"
+      arxiv: "https://arxiv.org/abs/2312.04218"
+
+  - title: "A Bayesian Inverse Approach to Proton Therapy Dose Delivery Verification"
+    authors: "With L. Hattam, A. E. Kyprianou and T. Pryer"
+    journal: "Proceedings of the Royal Society A"
+    journal_url: "https://doi.org/10.1098/rspa.2023.0836"
+    year: 2024
+    volume: 480
+    issue: 2301
+
+  - title: "Binary branching processes with Moran type interactions"
+    authors: "With E. Horton, D. Villemonais"
+    journal: "Ann. Inst. H. Poincaré Probab. Statist."
+    journal_url: "https://doi.org/10.1214/23-AIHP1453"
+    year: 2025
+    volume: 61
+    issue: 2
+    pages: "917-952"
+
+  - title: "SDEs with no strong solution arising from a problem of stochastic control"
+    authors: "With B. A. Robinson"
+    journal: "Electronic Journal of Probability"
+    journal_url: "https://doi.org/10.1214/23-EJP995"
+    year: 2023
+    volume: 28
+    pages: "1-24"
+
+  - title: "Controlled Measure-Valued Martingales: a Viscosity Solution Approach"
+    authors: "With S. Källblad, M. Larsson, S. Svaluto-Ferro"
+    journal: "Annals of Applied Probability"
+    journal_url: "https://doi.org/10.1214/23-AAP2012"
+    year: 2024
+    volume: 34
+    issue: 2
+    pages: "1987-2035"
+    links:
+      pdf: "/papers/mvmhjb.pdf"
+
+  - title: "Optimal control of martingales in a radially symmetric environment"
+    authors: "With B. A. Robinson"
+    journal: "Stochastic Processes and their Applications"
+    journal_url: "https://doi.org/10.1016/j.spa.2023.01.016"
+    year: 2023
+    volume: 159
+    pages: "149-198"
+
+  - title: "Using Echo State Networks to Approximate Value Functions for Control"
+    authors: "With A. G. Hart, K. R. Olding, O. Isupova and J. H. P. Dawes"
+    links:
+      pdf: "/papers/ESNs_for_RLv2.pdf"
+      arxiv: "https://arxiv.org/abs/2102.06258"
+
+  - title: "Monte-Carlo Methods for the Neutron Transport Equation"
+    authors: "With A. E. Kyprianou, S. C. Harris and M. Wang"
+    journal: "SIAM/ASA Journal on Uncertainty Quantification"
+    journal_url: "https://doi.org/10.1137/21M1390578"
+    year: 2022
+    volume: 10
+    issue: 2
+    pages: "775-825"
+    note: "&copy; 2022 Society for Industrial and Applied Mathematics."
+    links:
+      pdf: "/papers/MCNTE.pdf"
+      code: "https://github.com/amgc500/MCNTE"
+
+  - title: "Switching Identities by Probabilistic Means"
+    authors: "With J. Backhoff, A. Grass and M. Huesmann"
+    links:
+      pdf: "/papers/SwitchingIdentities.pdf"
+      arxiv: "https://arxiv.org/abs/2002.12840"
+
+  - title: "Stochastic Methods for Neutron Transport Equation III: Generational many-to-one and k-eff"
+    authors: "With E. Horton, A. E. Kyprianou and D. Villemonais"
+    journal: "SIAM Journal on Applied Mathematics"
+    journal_url: "https://doi.org/10.1137/19M1295854"
+    year: 2021
+    volume: 81
+    issue: 3
+    pages: "982-1001"
+    note: "&copy; 2021 Society for Industrial and Applied Mathematics."
+    links:
+      pdf: "/papers/SNTE3.pdf"
+
+  - title: "Multi-species neutron transport equation"
+    authors: "With S. C. Harris, E. Horton and A. E. Kyprianou"
+    journal: "Journal of Statistical Physics"
+    journal_url: "https://rdcu.be/bBdat"
+    year: 2019
+    volume: 176
+    pages: "425-255"   # NB: pages read 425-255 on the old page -- looks like a typo; please check.
+
+  - title: "Measure-valued martingales and optimality of Bass-type solutions to the Skorokhod Embedding Problem"
+    authors: "With M. Beiglböck, M. Huesmann and S. Källblad"
+    links:
+      pdf: "/papers/BassRoot.pdf"
+      arxiv: "https://arxiv.org/abs/1708.07071"
+
+  - title: "The geometry of multi-marginal Skorokhod Embedding"
+    authors: "With M. Beiglböck and M. Huesmann"
+    journal: "Probability Theory and Related Fields"
+    journal_url: "https://rdcu.be/bMNTa"
+    open_access: true
+    year: 2020
+    volume: 176
+    pages: "1045-1096"
+
+  - title: "Robust Hedging of Options on a Leveraged Exchange Traded Fund"
+    authors: "With S. M. Kinsley"
+    journal: "Annals of Applied Probability"
+    journal_url: "http://dx.doi.org/10.1214/18-AAP1427"
+    year: 2019
+    volume: 29
+    issue: 1
+    pages: "531-576"
+    links:
+      pdf: "/papers/AAP1427.pdf"
+
+  - title: "Discretisation and Duality of Optimal Skorokhod Embedding Problems"
+    authors: "With S. M. Kinsley"
+    journal: "Stochastic Processes and their Applications"
+    journal_url: "https://doi.org/10.1016/j.spa.2018.07.008"
+    year: 2019
+    volume: 129
+    issue: 7
+    pages: "2376-2405"
+
+  - title: "Martingale optimal transport with stopping"
+    authors: "With E. Bayraktar and Y. Stoev"
+    journal: "SIAM Journal on Control and Optimisation"
+    journal_url: "https://doi.org/10.1137/17M1114065"
+    volume: 56
+    issue: 1
+    pages: "417-433"
+    note: "&copy; 2018 Society for Industrial and Applied Mathematics."
+    links:
+      pdf: "/papers/MOTStop.pdf"
+
+  - title: "Model-independent pricing with insider information: a Skorokhod embedding approach"
+    authors: "With B. Acciaio and M. Huesmann"
+    journal: "Advances in Applied Probability"
+    journal_url: "https://doi.org/10.1017/apr.2020.50"
+    year: 2021
+    volume: 53
+    issue: 1
+    pages: "30-56"
+    links:
+      code: "/papers/ModelIndependentPricingWithInsiderInformation.ipynb"
+
+  - title: "Model-independent bounds for Asian options: a dynamic programming approach"
+    authors: "With S. Källblad"
+    journal: "SIAM Journal on Control and Optimisation"
+    journal_url: "https://doi.org/10.1137/16M1087527"
+    year: 2017
+    volume: 55
+    issue: 6
+    pages: "3409-3436"
+    note: "&copy; 2017 Society for Industrial and Applied Mathematics."
+    links:
+      pdf: "/papers/AsianOptionsFinal.pdf"
+
+  - title: "The Root solution to the multi-marginal embedding problem: an optimal stopping and time-reversal approach"
+    authors: "With J. Obłój and N. Touzi"
+    journal: "Probability Theory and Related Fields"
+    journal_url: "http://www.springer.com/-/2/AWGMUoOupQeGZwRwur_4"   # NB: opaque Springer link, likely stale -- consider replacing with the DOI.
+    open_access: true
+    year: 2019
+    volume: 173
+    pages: "211-259"
+
+  - title: "Pathwise super-replication via Vovk's outer measure"
+    authors: "With M. Beiglböck, M. Huesmann, N. Perkowski and D. Prömel"
+    journal: "Finance and Stochastics"
+    journal_url: "https://link.springer.com/article/10.1007/s00780-017-0338-2"
+    open_access: true
+    year: 2017
+
+  - title: "Optimal Transport and Skorokhod Embedding"
+    authors: "With M. Beiglböck and M. Huesmann"
+    journal: "Inventiones Mathematicae"
+    journal_url: "http://link.springer.com/article/10.1007/s00222-016-0692-2"
+    open_access: true
+    year: 2017
+    volume: 208
+    pages: "327-400"
+
+  - title: "On joint distributions of the maximum, minimum and terminal value of a continuous uniformly integrable martingale"
+    authors: "With J. Obłój"
+    journal: "Stochastic Processes and their Applications"
+    journal_url: "http://dx.doi.org/10.1016/j.spa.2015.03.005"
+    year: 2015
+
+  - title: "Robust pricing and hedging under trading restrictions and the emergence of local martingale models"
+    authors: "With J. Obłój and Z. Hou"
+    journal: "Finance and Stochastics"
+    journal_url: "http://dx.doi.org/10.1007/s00780-016-0293-3"
+    year: 2016
+    links:
+      pdf: "/papers/RobustLMM_Final.pdf"
+
+  - title: "Optimal robust bounds for variance options"
+    authors: "With J. Wang"
+    links:
+      pdf: "/papers/RobustVariance.pdf"
+      arxiv: "http://arxiv.org/abs/1308.4363"
+      code: "https://github.com/amgc500/variance-calls"
+
+  - title: "From minimal embeddings to minimal diffusions"
+    authors: "With M. Klimmek"
+    journal: "Electronic Communications in Probability"
+    journal_url: "http://projecteuclid.org/euclid.ecp/1465316736"
+    year: 2014
+    volume: 19
+    pages: "1-13"
+    links:
+      arxiv: "http://arxiv.org/abs/1306.2873"
+
+  - title: "Model-independent no-arbitrage conditions on American put options"
+    authors: "With C. Hoeggerl"
+    journal: "Mathematical Finance"
+    journal_url: "http://onlinelibrary.wiley.com/doi/10.1111/mafi.12058/abstract"
+    year: 2016
+    volume: 26
+    issue: 2
+    pages: "431-458"
+
+  - title: "Embedding Laws in Diffusions by Functions of Time"
+    authors: "With G. Peskir"
+    journal: "Annals of Probability"
+    journal_url: "http://projecteuclid.org/euclid.aop/1441792291"
+    year: 2015
+    volume: 43
+    issue: 5
+    pages: "2481-2510"
+    links:
+      pdf: "/papers/EmbeddingInDiffusionsTime.pdf"
+
+  - title: "Root's Barrier: Construction, Optimality and Applications to Variance Options"
+    authors: "With J. Wang"
+    journal: "Annals of Applied Probability"
+    journal_url: "http://www.imstat.org/aap/"
+    year: 2013
+    volume: 23
+    issue: 3
+    pages: "859-894"
+    links:
+      pdf: "/papers/AAP857.pdf"
+
+  - title: "Utility theory front to back &#8212; inferring utility from agents' choices"
+    authors: "With D. Hobson and J. Obłój"
+    journal: "International Journal of Theoretical and Applied Finance (IJTAF)"
+    journal_url: "http://dx.doi.org/10.1142/S0219024914500186"
+    year: 2014
+    volume: 17
+    issue: 3
+
+  - title: "Time-Homogeneous Diffusions with a Given Marginal at a Random Time"
+    authors: "With D. Hobson and J. Obłój"
+    journal: "ESAIM: Probability and Statistics"
+    journal_url: "http://www.esaim-ps.org/abstract_S1292810010000212"
+    year: 2011
+    volume: 15
+    pages: "S11-S24"
+    note: 'The original publication is available at <a href="http://www.edpsciences.org/ps">www.edpsciences.org/ps</a>.'
+    links:
+      pdf: "/papers/ps0951.pdf"
+
+  - title: "Robust pricing and hedging of double no-touch options"
+    authors: "With J. Obłój"
+    journal: "Finance and Stochastics"
+    journal_url: "http://www.springerlink.com/content/28mh56t520847771/"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
+    year: 2011
+    volume: 15
+    issue: 3
+    pages: "573-605"
+    links:
+      pdf: "/papers/doublenotouch_jan09.pdf"
+      arxiv: "http://arxiv.org/abs/0901.0674"
+
+  - title: "Robust hedging of double touch barrier options"
+    authors: "With J. Obłój"
+    journal: "SIAM Journal on Financial Mathematics"
+    journal_url: "http://epubs.siam.org/sifin/resource/1/sjfmbj/v2/i1/p141_s1"
+    year: 2011
+    volume: 2
+    pages: "141-182"
+
+  - title: "Arbitrage bounds"
+    journal: "Encyclopedia of Quantitative Finance"
+    journal_url: "http://onlinelibrary.wiley.com/doi/10.1002/9780470061602.eqf05010/abstract"   # NB: original link went via ezp2.bath.ac.uk (library proxy) -- stripped so it resolves off-campus; please verify.
+    year: 2010
+    note: "John Wiley &amp; Sons, Ed. R. Cont."
+
+  - title: "Pathwise inequalities for local time: applications to Skorokhod embeddings and optimal stopping"
+    authors: "With D. Hobson and J. Obłój"
+    journal: "Annals of Applied Probability"
+    journal_url: "http://www.imstat.org/aap/"
+    year: 2008
+    volume: 18
+    issue: 5
+    pages: "1870-1896"
+    links:
+      pdf: "/papers/AAP507.pdf"
+
+  - title: "Classes of measures which can be embedded in the Simple Symmetric Random Walk"
+    authors: "With J. Obłój"
+    journal: "Electronic Journal of Probability"
+    journal_url: "http://ejp.ejpecp.org/article/view/516"
+    year: 2008
+    pages: "1203-1228"
+
+  - title: "A unifying class of Skorokhod embeddings: connecting the Azema-Yor and Vallois embeddings"
+    authors: "With D. Hobson"
+    journal: "Bernoulli"
+    journal_url: "http://projecteuclid.org/euclid.bj/1175287723"
+    year: 2007
+    volume: 13
+    issue: 1
+    pages: "114-130"
+    links:
+      pdf: "/papers/VarSkewEmbed_Bernoulli_Final.pdf"
+
+  - title: "Extending Chacon-Walsh: minimality and generalised starting distributions"
+    journal: "Séminaire de Probabilités XLI, Springer"
+    journal_url: "http://www.springer.com/math/algebra/book/978-3-540-77912-4"
+    year: 2008
+    links:
+      arxiv: "http://arxiv.org/abs/math.PR/0503535"
+
+  - title: "Local Martingales, Bubbles and Option Prices"
+    authors: "With D. Hobson"
+    journal: "Finance and Stochastics"
+    journal_url: "http://www.springerlink.com/link.asp?id=q5r133w25080r603"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
+    year: 2005
+    volume: 9
+    issue: 4
+    pages: "477-492"
+
+  - title: "Skorokhod Embeddings, Minimality and Non-centred Target Distributions"
+    authors: "With D. Hobson"
+    journal: "Probability Theory and Related Fields"
+    journal_url: "http://www.springerlink.com/link.asp?id=m45p87631x7426r9"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
+    year: 2006
+    volume: 135
+    issue: 3
+    pages: "395-414"
+    links:
+      arxiv: "http://www.arxiv.org/abs/math.PR/0310403"
+
+  - title: "An Optimal Skorokhod Embedding for Diffusions"
+    authors: "With D. Hobson"
+    journal: "Stochastic Processes and their Applications"
+    journal_url: "http://dx.doi.org/10.1016/j.spa.2004.01.003"
+    year: 2004
+    volume: 111
+    pages: "17-39"

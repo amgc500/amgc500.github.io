@@ -1,0 +1,78 @@
+/* ============================================================================
+   Overrides for the Pico theme (loaded only when `style: pico` in _config.yml,
+   after pico.classless.min.css). Pico styles the semantic HTML; this file adds
+   the few things Pico can't know about: the floated portrait, the sticky
+   section nav, and the publication-list formatting. Colours/typography/spacing
+   are left to Pico so the comparison is a fair one.
+   ============================================================================ */
+
+/* Hold the content to a comfortable reading measure (Pico's default is wide). */
+body > main { max-width: 48rem; }
+
+/* --- Heading hierarchy ----------------------------------------------------
+   Pico's h3 sits only a step below h2, so sub-headings ("Current members")
+   competed with the section titles. Make h2 the clear section header (with a
+   rule, echoing the simple theme) and bring h3 down to a modest sub-heading. */
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* --- Masthead & portrait -------------------------------------------------- */
+.masthead::after { content: ""; display: block; clear: both; }
+.portrait {
+  float: right;
+  width: 210px;
+  max-width: 42%;
+  height: auto;
+  margin: 0.3rem 0 1rem 1.5rem;
+  border-radius: var(--pico-border-radius);
+}
+.masthead h1 { margin-bottom: 0.2rem; }
+.masthead .role { color: var(--pico-muted-color); margin-top: 0; }
+.contact .label { color: var(--pico-muted-color); }
+.contact address { font-style: normal; margin: 0.15rem 0 0.6rem; }
+
+/* --- Sticky section navigation -------------------------------------------- */
+.toc {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  margin: 1rem 0 1.8rem;
+  padding: 0.55rem 0;
+  background: var(--pico-background-color);
+  border-bottom: 1px solid var(--pico-muted-border-color);
+  font-size: 0.95rem;
+}
+.toc a { color: var(--pico-muted-color); text-decoration: none; }
+.toc a:hover { color: var(--pico-primary); text-decoration: underline; }
+
+/* --- Publication list ----------------------------------------------------- */
+ul.papers { list-style: none; padding-left: 0; }
+.paper {
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+  text-indent: -1.4rem;   /* hanging indent */
+}
+.paper-title { font-weight: 600; }
+.paper-note { color: var(--pico-muted-color); font-size: 0.9rem; }
+
+/* Keep a jumped-to heading clear of the sticky bar. */
+section[id] { scroll-margin-top: 3.5rem; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media (max-width: 34rem) {
+  .portrait { float: none; display: block; margin: 0 0 1rem; width: 190px; max-width: 60%; }
+}

@@ -1,0 +1,46 @@
+# --- Site metadata -----------------------------------------------------------
+title:       "Alexander Cox"
+author:      "Alexander Cox"
+description: "Alexander Cox — Professor of Probability, University of Bath."
+
+# On a user site (amgc500.github.io) the site lives at the domain root, so
+# baseurl is empty. If you ever move this into a *project* repo served at
+# amgc500.github.io/somesite/, set:  baseurl: "/somesite"
+baseurl: ""
+url:     "https://amgc500.github.io"
+
+# Front-end style: "simple" (the hand-written stylesheet) or "pico" (vendored
+# Pico CSS + a thin overrides layer). Switch here and rebuild to compare.
+style: "pico"
+
+# --- Contact / profile (edit these, they surface on the front page) ----------
+contact:
+  role:    "Professor of Probability"
+  email:   "A.M.G.Cox@bath.ac.uk"
+  phone:   "01225 386187"
+  office:  "4 West 4.17"
+  address:
+    - "Department of Mathematical Sciences"
+    - "University of Bath"
+    - "Claverton Down"
+    - "Bath BA2 7AY"
+
+# --- Build settings ----------------------------------------------------------
+# GitHub Pages builds Jekyll for you; keep this minimal and it "just works".
+markdown: kramdown
+permalink: pretty
+
+# Don't copy these into the built site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - preview.html
+  - preview_simple.html
+  - preview_pico.html
+  - build_preview.py
+  - _render_course.py
+  - preview_sc.html
+  - preview_os.html
+  - preview_course.html
+  - RECOVERY-CHECKLIST.md

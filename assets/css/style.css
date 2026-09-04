@@ -1,0 +1,161 @@
+/* ============================================================================
+   Alexander Cox — homepage styles.
+   A quiet, text-forward academic layout: one serif column, a muted navy link
+   accent, generous spacing so a long reference list stays scannable.
+   No external fonts or frameworks, so nothing rots.
+   ============================================================================ */
+
+:root {
+  --ink:        #1b1b1b;   /* body text            */
+  --ink-soft:   #555;      /* secondary text       */
+  --accent:     #2f4b7c;   /* links (muted navy)   */
+  --accent-dk:  #1d3054;   /* link hover           */
+  --rule:       #d9d9df;   /* hairlines            */
+  --paper:      #fcfcfd;   /* background           */
+  --measure:    46rem;     /* content width        */
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Charter, "Georgia", Cambria, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+/* --- Links ---------------------------------------------------------------- */
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dk); text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Headings ------------------------------------------------------------- */
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.25rem;
+}
+h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 2.6rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1.05rem; font-weight: 600; margin: 1.4rem 0 0.3rem; }
+
+/* --- Masthead: name + contact on the left, photo on the right ------------- */
+.masthead { margin-bottom: 1.5rem; }
+.masthead::after { content: ""; display: block; clear: both; }
+
+.portrait {
+  float: right;
+  width: 210px;
+  max-width: 42%;
+  height: auto;
+  margin: 0.3rem 0 1rem 1.5rem;
+  border: 1px solid var(--rule);
+}
+
+.masthead .role { color: var(--ink-soft); margin: 0 0 1rem; font-size: 1.1rem; }
+
+.contact { margin: 0; font-size: 0.97rem; line-height: 1.5; }
+.contact .label { color: var(--ink-soft); }
+.contact address { font-style: normal; margin: 0.15rem 0 0.6rem; }
+
+hr.divider { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0 0; }
+
+/* --- Sticky section navigation -------------------------------------------- */
+/* Bleeds to the column edges and sticks to the top so every section is one
+   click away however far you have scrolled. */
+.toc {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  margin: 1rem -1.25rem 1.8rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+.toc a { color: var(--ink-soft); text-decoration: none; }
+.toc a:hover { color: var(--accent-dk); text-decoration: underline; }
+
+/* Keep a jumped-to heading clear of the sticky bar. */
+section[id] { scroll-margin-top: 3.5rem; }
+html { scroll-behavior: smooth; }
+
+/* --- Body prose ----------------------------------------------------------- */
+p { margin: 0.8rem 0; }
+.lead { max-width: 40rem; }
+
+/* --- Publication list ----------------------------------------------------- */
+ul.papers { list-style: none; margin: 0; padding: 0; }
+
+.paper {
+  margin: 0 0 1.1rem;
+  padding-left: 1.4rem;
+  text-indent: -1.4rem;   /* hanging indent: title flush, wraps indented */
+}
+.paper-title  { font-weight: 600; }
+.paper-authors,
+.paper-ref { color: var(--ink); }
+.paper-links { margin-left: 0.15rem; }
+.paper-note  { color: var(--ink-soft); font-size: 0.92rem; }
+.paper-authors, .paper-ref, .paper-links, .paper-note { display: inline; }
+
+/* Simple lists (teaching, links, group) */
+ul.plain { margin: 0.4rem 0; padding-left: 1.2rem; }
+ul.plain li { margin: 0.25rem 0; }
+
+.note { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* --- Course pages --------------------------------------------------------- */
+.breadcrumb { font-size: 0.95rem; margin: 0 0 1rem; }
+.course-meta { color: var(--ink-soft); margin-top: -0.2rem; }
+
+/* --- Footer --------------------------------------------------------------- */
+.site-footer {
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+/* --- Small screens: photo stops floating, sits above the text ------------- */
+@media (max-width: 34rem) {
+  .portrait {
+    float: none;
+    display: block;
+    margin: 0 0 1rem;
+    width: 190px;
+    max-width: 60%;
+  }
+  body { font-size: 1rem; }
+  h1 { font-size: 1.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
