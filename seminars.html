@@ -1,0 +1,41 @@
+---
+layout: default
+title: "Seminar archive"
+permalink: /seminars/
+mathjax: true
+---
+<style>
+  /* Scoped to this page so it touches no shared stylesheet. */
+  .seminar-list { list-style: none; padding-left: 0; margin: 0.4rem 0 1.2rem; }
+  .seminar-list li { list-style: none; margin: 0.35rem 0; }
+  .seminar-list li::marker { content: ""; }
+  .sem-date { display: inline-block; min-width: 4.6rem; opacity: 0.6; font-variant-numeric: tabular-nums; }
+  .seminar-list .speaker { font-weight: 600; }
+</style>
+<p class="breadcrumb"><a href="{{ '/' | relative_url }}">&larr; Alexander Cox</a></p>
+<h1>Seminar archive</h1>
+<p class="lead">An archive of the probability seminar series I organised or
+co-organised at Bath between 2006 and 2013. For current seminars, see the
+<a href="https://www.bath.ac.uk/research/centres/probability-laboratory/seminars/">Prob-L@b seminar page</a>.
+Speakers are from Bath unless an affiliation is given.</p>
+
+<nav class="toc" aria-label="Seminar series">
+{%- for s in site.data.seminars.series %}
+  <a href="#{{ s.slug }}">{{ s.name | replace: ' Seminars', '' | replace: 'Informal Statistics (CAKE)', 'CAKE' }}</a>
+{%- endfor %}
+</nav>
+
+{% for s in site.data.seminars.series %}
+<section id="{{ s.slug }}">
+  <h2>{{ s.name }}</h2>
+  {%- if s.note %}<p class="note">{{ s.note }}</p>{% endif %}
+  {%- for t in s.terms %}
+  <h3>{{ t.term }}</h3>
+  <ul class="seminar-list">
+    {%- for talk in t.talks %}
+    <li><span class="sem-date">{{ talk.date }}</span> <span class="speaker">{{ talk.speaker }}</span>{% if talk.title != "" %} &mdash; {{ talk.title }}{% endif %}{% if talk.abstract %} (<a href="{{ '/seminars/abstracts/' | append: talk.abstract | relative_url }}">abstract</a>){% endif %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</section>
+{% endfor %}
