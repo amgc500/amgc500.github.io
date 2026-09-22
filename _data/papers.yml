@@ -390,7 +390,7 @@ papers:
   - title: "Local Martingales, Bubbles and Option Prices"
     authors: "With D. Hobson"
     journal: "Finance and Stochastics"
-    journal_url: "http://www.springerlink.com/link.asp?id=q5r133w25080r603"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
+    journal_url: "https://doi.org/10.1007/s00780-005-0162-y"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
     year: 2005
     volume: 9
     issue: 4
@@ -399,7 +399,7 @@ papers:
   - title: "Skorokhod Embeddings, Minimality and Non-centred Target Distributions"
     authors: "With D. Hobson"
     journal: "Probability Theory and Related Fields"
-    journal_url: "http://www.springerlink.com/link.asp?id=m45p87631x7426r9"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
+    journal_url: "https://doi.org/10.1007/s00440-005-0467-y"   # NB: springerlink.com is dead -- replace with the current link.springer.com DOI.
     year: 2006
     volume: 135
     issue: 3
