@@ -30,6 +30,18 @@
 # =============================================================================
 
 papers:
+  - title: "Monte Carlo Power Iteration Algorithms: Convergence, Analysis and Application to Reactor Criticality Calculations"
+    authors: "With T. Davis, J. Hofstadler and A. Kyprianou"
+    links:
+      pdf: "/papers/PowerIteration.pdf"
+      arxiv: "https://arxiv.org/abs/2610.36266"
+
+  - title: "Reducing Complexity of Pseudo-Marginal Sequential Monte Carlo via Hierarchical Tempering"
+    authors: "With J. Martínek, J. Hofstadler and R. Scheichl"
+    links:
+      pdf: "/papers/HierarchicalTempering.pdf"
+      arxiv: "https://arxiv.org/abs/2610.37082"
+
   - title: "Utility Maximisation with Model-independent Constraints"
     authors: "With D. Hernandez-Hernandez"
     links:
